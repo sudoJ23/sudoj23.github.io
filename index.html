@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Who am I?</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="header">
+        portfolio
+    </div>
+    <div class="profile-box">
+        <center>
+            <div class="profile-pic">
+                <img class="ea-border-anim" height="100%" width="100%" src="assets/img/profile.jpg" alt="Profile pic">
+            </div>
+            <div class="nama">
+                <h1>J23</h1>
+            </div>
+            <div class="title">Programmer</div>
+            <div id="info" class="personal-info">
+                <div id="dropbtn" onclick="toggle()">
+                    <ion-icon style="height: 100%;width: 100%;" name="ios-arrow-down"></ion-icon>
+                </div>
+                <div class="personal-info-title">ABOUT ME</div>
+                <div class="personal-info-content">16 year old programmer, who started programming since junior high school</div>
+                <div class="personal-info-bottom">View certificate <a id="link" href="#" onclick="window.open('https://github.com/sudoJ23/certificate', '_blank')">here</a></div>
+            </div>
+        </center>
+    </div>
+    <div class="bottom">
+        <div class="social-github" onclick="window.open('https://github.com/sudoj23', '_blank');">
+            <ion-icon style="height: 100%;width: 100%;" name="logo-github"></ion-icon>
+        </div>
+        <center>
+            <div class="social-instagram" onclick="window.open('https://www.instagram.com/herdianto.jeremi', '_blank');">
+                <ion-icon style="height: 100%;width: 100%;" name="logo-instagram"></ion-icon>
+            </div>
+        </center>
+        <div class="social-twitter" onclick="window.open('https://twitter.com/__j23__', '_blank');">
+            <ion-icon style="height: 100%;width: 100%;" name="logo-twitter"></ion-icon>
+        </div>
+    </div>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script>
+        function toggle() {
+            var tombol = document.getElementById('dropbtn');
+            var page = document.getElementById('info');
+            setTimeout(function() {document.getElementById('link').style = 'text-decoration: underline; color: rgb(0, 81, 255);'}, 1000);
+            page.style = "height: 230px";
+            tombol.style = "transform: rotateZ(180deg)";
+            tombol.setAttribute('onclick', 'toggles()');
+        }
+
+        function toggles() {
+            var tombol = document.getElementById('dropbtn');
+            var page = document.getElementById('info');
+            document.getElementById('link').style = 'color: rgb(51, 51, 51);text-decoration: none;';
+            page.style = "height: 30px";
+            tombol.style = "transform: rotateZ(0deg)";
+            tombol.setAttribute('onclick', 'toggle()');
+        }
+    </script>
+</body>
+</html>
